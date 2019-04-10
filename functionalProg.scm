@@ -13,13 +13,14 @@
   (log n 2))
 
 ;4
-;this doesn't work yet but it could be close idk
-;(define (four (list lst1) (list lst2))
-; (map (+) ((lst1) (lst2))))
+(define lst1 '(1 2 3 4))
+(define lst2 '(5 6 7 8))
+;he said that we'd need the multiplication function
+(map * lst1 lst2)
+(map + lst1 lst2)
 
-;this part will take a list and double every element. could use it
-(define (foo lst)
-  (map (lambda (x) (* 2 x)) lst))
+;5
+
 
 ;6
 (define (fib n)
@@ -29,6 +30,7 @@
     (else
      (+(fib (- n 1))(fib (- n 2))))))
      
+;7
 
 ;8
 ;from what he said in lecture i think it's close to this
