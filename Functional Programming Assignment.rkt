@@ -1,6 +1,7 @@
 #lang racket
-
-
+;Functional Programming Assignment
+;Authors: Kelly Hancox, Seon Jongin, Christian Tsoungui Nkoulou
+;date: 4/12/19
 
 ;1
 
@@ -8,23 +9,17 @@
 
 (define e 2.71828)
 
-
-
 ;2
 
 (define (circle-specs r)
 
   (let ([pir (* r 3.14159)])(list (* 2 pir) (* r pir))))
 
-
-
 ;3
 
 (define (log2 n)
 
   (log n 2))
-
-
 
 ;4
 
@@ -35,14 +30,10 @@
       (map * lsta lstb)
 )
 
-
 ;5
 (define (dot-product vector1 vector2)
   (apply + (listMult vector1 vector2))
   )
-
-
-
 
 ;6
 
@@ -58,25 +49,17 @@
 
      (+(fib (- n 1))(fib (- n 2))))))
 
-     
-
 ;7
 (define (create-list start end)
   (cond
-    ((equal? start end) start)
-    (else (write start) (create-list (+ start 1) end))
+    ((equal? start end) (append (list end) (list)))
+    (else (cons start (create-list (+ start 1) end)))
   )
-  )
+ )
 
 ;8
-
-;from what he said in lecture i think it's close to this
-
-;(define (fib-list)
-
-;  (map fib(create-list 1 num)))
-
-
+(define (fib-list num)
+  (map fib(create-list 1 num)))
 
 ;9
 
@@ -90,14 +73,9 @@
 
           (nth (cdr lst) (- place 1)))))
 
-
-
 ;10
 
 (define (remainder a b)
-
   (if (< a b)
-
       a
-
   (remainder (- a b) b)))
