@@ -13,14 +13,13 @@
   (log n 2))
 
 ;4
-(define lst1 '(1 2 3 4))
-(define lst2 '(5 6 7 8))
-;he said that we'd need the multiplication function
-(map * lst1 lst2)
-(map + lst1 lst2)
+(define (listMult lsta lstb)
+      (map * lsta lstb))
+
 
 ;5
-
+(define (dot-product vector1 vector2)
+  (apply + (listMult vector1 vector2)))
 
 ;6
 (define (fib n)
@@ -36,6 +35,7 @@
 ;from what he said in lecture i think it's close to this
 ;(define (fib-list)
 ;  (map fib(create-list 1 num)))
+
 
 ;9
 (define nth
