@@ -61,8 +61,12 @@
      
 
 ;7
-
-
+(define (create-list start end)
+  (cond
+    ((equal? start end) start)
+    (else (write start) (create-list (+ start 1) end))
+  )
+  )
 
 ;8
 
